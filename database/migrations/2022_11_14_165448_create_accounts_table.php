@@ -13,15 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('customerr', function (Blueprint $table) {
-            $table->id('customerid');
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+        Schema::create('accounts', function (Blueprint $table) {
+            $table->id('AccountID', 12);
+            $table->string('Name', 24);
+            $table->string('Username', 12);
+            $table->string('Email', 24)->unique;
+            $table->string('Password', 12);
+            $table->timestamps();
         });
     }
- 
+
     /**
      * Reverse the migrations.
      *
@@ -29,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('customerr');
+        Schema::dropIfExists('accounts');
     }
 };

@@ -14,7 +14,11 @@ use App\Http\Controllers\UserDo;
 |
 */
 //GET METHOD
-Route::GET('/', [UserDo::class,'blank']);
+Route::GET('/', [UserDo::class,'index']);
+Route::GET('/registrasi', [UserDo::class,'blank']);
+Route::GET('/login', [UserDo::class,'login']);
+Route::GET('/logout', [UserDo::class,'logout']);
+Route::GET('/welcome', [UserDo::class, 'welcome']);
 
 //POST METHOD
-Route::POST('/', [UserDo::class,'signup']);
+Route::POST('/registrasi', [UserDo::class,'registrasi']);
