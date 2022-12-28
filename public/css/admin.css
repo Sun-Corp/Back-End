@@ -1,0 +1,85 @@
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* .page {
+  display: flex;
+} */
+
+.page .sidebar {
+  height: 100vh;
+  width: 308px;
+  background-color: #516FEB;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+.page .content {
+  height: 100vh;
+  margin-left: 308px;
+}
+
+.sidebar-header {
+  padding: 10px 15px;
+}
+
+.sidebar-admin-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-container {
+  max-width: 59px;
+  padding-top: 50px;
+  margin: 10px auto;
+}
+
+.admin-logo {
+  width: 100%;
+  height: auto;
+}
+
+.admin-name {
+  margin: 0px auto;
+}
+
+.admin {
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.nav-list {
+  list-style-type: none;
+  padding: 0px 20px;
+  margin: 30px;
+  width: 250px;
+}
+
+.nav-item {
+  padding: 10px 5px;
+  border-radius: 10px;
+  margin: 15px 0px;
+  width: 100%;
+}
+
+.nav-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0.4em rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+.nav-item.active {
+  background-color: white;
+  box-shadow: 0 0 0.4em rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+.nav-item.active .nav-link{
+  color: #516FEB;
+}
+
+.pgb {
+  background-color: #516FEB;
+}

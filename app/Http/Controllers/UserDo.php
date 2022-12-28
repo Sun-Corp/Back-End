@@ -27,26 +27,39 @@ class UserDo extends Controller {
         return session('account');
     }
     public function index(){
-        if(empty(session('account'))){
+        $var=session('account');
+        if($var == null){
             return view("login");
         }
-        return redirect('/welcome');
+        return view('welcome');
     }
     public function login(Request $req){
         $account = Account::where("Email", $req->Email)->where("Password",$req->Password)->first();
 
         if(!empty($account)){
-            session(['account'=>$account]);
-            return redirect('/welcome');
+            if ($account->Email == "admin"){
+                $account->Role = 'admin';
+                session(['account'=>$account]);
+                return redirect('/admin');
+            } else {
+                $account->Role = 'customer';
+                session(['account'=>$account]);
+                return redirect('/welcome');
+            }
         } else {
-            return redirect("/")->with("flash_message","user tidak ditemukan");
+            return redirect("/")->with("alert","User tidak ditemukan !!!");
         }
     }
 
     //WELCOME SESSION
     public function welcome(){
+        $var=session('account');
+        if($var == null){
+            return redirect("/")->with("alert","Harap Login Terlebih dahulu");
+        } 
         return view("welcome");
     }
+
     //LOGOUT SESSION
     public function logout(){
         session(['account'=>null]);

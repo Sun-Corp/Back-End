@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserDo;
+use App\Http\Controllers\AdminDo;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,12 +14,15 @@ use App\Http\Controllers\UserDo;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//GET METHOD
+//LOGIN REGISTER METHOD
 Route::GET('/', [UserDo::class,'index']);
 Route::GET('/registrasi', [UserDo::class,'blank']);
 Route::GET('/login', [UserDo::class,'login']);
 Route::GET('/logout', [UserDo::class,'logout']);
+Route::POST('/registrasi', [UserDo::class,'registrasi']);
+
 Route::GET('/welcome', [UserDo::class, 'welcome']);
 
-//POST METHOD
-Route::POST('/registrasi', [UserDo::class,'registrasi']);
+//ADMIN METHOD
+Route::GET('/admin', [AdminDo::class, 'home']);
+Route::GET('/addtemplate', [AdminDo::class, 'addtemplate']); 
