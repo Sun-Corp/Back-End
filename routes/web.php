@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserDo;
 use App\Http\Controllers\AdminDo;
+use App\Http\Controllers\HomeDo;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,12 @@ Route::GET('/welcome', [UserDo::class, 'welcome']);
 //ADMIN METHOD
 Route::GET('/admin', [AdminDo::class, 'home']);
 Route::GET('/addtemplate', [AdminDo::class, 'addtemplate']); 
+
+//USER METHOD
+Route::GET('/homepage', [HomeDo::class, 'home']);
+Route::GET('/details/{NamaTema}/{NamaTemplate}', [HomeDo::class, 'detail']);
+Route::GET('/cart', [HomeDo::class, 'cart']);
+Route::GET('/addcart/{NamaTema}/{NamaTemplate}', [HomeDo::class, 'addcart']);
+Route::GET('/filldata/{TemplateID}', [HomeDo::class, 'filldata']);
+Route::POST('/filldata/{TemplateID}', [HomeDo::class, 'uploadfilldata']);
+Route::GET('/invoice/{AcaraID}', [HomeDo::class, 'invoice']);

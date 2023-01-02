@@ -1,0 +1,262 @@
+*,html,body{
+  margin: 0;
+  padding:0;
+  font-family: "Roboto", sans-serif;
+}
+
+body{
+  background:rgba(248, 248, 248, 1);
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper{
+  display: flex;
+  justify-content:space-between;
+  width: 100%;
+  height: 70px;
+  background-color: rgb(81, 111, 235);
+  align-items: center;
+}
+
+.cart{
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  color: white;
+  align-items: center;
+}
+
+.cart img{
+  width: 40px;
+}
+
+.cart>li{
+  padding: 15px;
+}
+
+.cart li:hover .dropdown{
+  display: block;
+  background-color: white;
+  position:absolute;
+  align-items: center;
+  border-radius: 10px;
+  margin-block: 5px;
+}
+
+.dropdown{
+  display: none;
+  list-style-type: none;
+}
+
+
+.dropdown li a{
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: rgba(152, 152, 171, 1);
+  align-items: center;
+}
+
+.sideLeft{
+  display: flex;
+  align-items: center;
+}
+
+.navigation{
+  list-style-type: none;
+  text-align: center;
+}
+
+.navigation>li{
+  display: inline-block;
+  padding:20px;
+}
+
+.navigation>li>a{
+  color: white;
+  font-size: 15px;
+  font-weight: 550;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 12px 12px;
+}
+
+.navigation>li>a:hover{
+  background-color: rgb(243, 161, 48);
+  color: black;
+  transition:all .4s ease-in-out;
+}
+
+.content{
+  padding: 50px;
+  color:rgba(81, 111, 235, 1);
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+}
+
+.isiData h1{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.isiData{
+  width:40%;
+  padding: 50px;
+  margin: auto;
+}
+
+.isiData img{
+  width: 100px;
+  height: 30px;
+}
+
+input[type=text]{
+  width: 100%;
+  padding: 12px 20px;
+  margin-top: 5px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=date]{
+  width: 100%;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#image_input{
+  
+  width: 100%;
+  padding: 60px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-size: cover ;
+}
+
+#vidio_input{
+  width: 100%;
+  padding: 60px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-size: cover ;
+}
+
+
+label{
+  padding: 20px;
+}
+
+
+.home-button {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 24px;
+  color: #FFFFFF;
+  width:fit-content;
+  height: 44px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(81, 111, 235);
+}
+
+.popup{
+  border: 2px double #ccc;
+  width: 400px;
+  background:rgb(255, 255, 255);
+  border-radius: 6px;
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  text-align: center;
+  padding: 0 30px 50px;
+  color: rgb(81, 111, 235);
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup{
+  visibility: visible;
+  top:70%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popup img{
+  width: 70px;
+  height:70px;
+  margin-top: -35px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.popup h3{
+  font-size: 30px;
+  font-weight: 500;
+  margin: 30px 0 10px;
+}
+
+.popup button{
+  width: 100%;
+  margin-top: 50px;
+  padding: 10px 0;
+  background:rgb(81, 111, 235) ;
+  color:#FFFFFF;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}
+
+#footer>.bungkus{
+  display: flex;
+  background-color: rgb(81, 111, 235);
+  padding: 0px;
+  height: 150px;
+  align-items: center;
+}
+
+.bungkus>.left{
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  color: white;
+  padding: 40px;
+}
+
+.title{
+  color: rgb(243, 161, 48);
+  font-weight: 1000;
+  text-transform: capitalize;
+  font-size: 100%;
+}
+
+#footer>.mid{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.about{
+  color: white;
+  text-transform: capitalize;
+  font-size: larger;
+}

@@ -1,0 +1,186 @@
+*,html,body{
+  margin: 0;
+  padding:0;
+  font-family: "Roboto", sans-serif;
+}
+
+body{
+  background:rgba(248, 248, 248, 1);
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper{
+  display: flex;
+  justify-content:space-between;
+  width: 100%;
+  height: 70px;
+  background-color: rgb(81, 111, 235);
+  align-items: center;
+}
+
+.cart{
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  color: white;
+  align-items: center;
+}
+
+.cart img{
+  width: 40px;
+}
+
+.cart>li{
+  padding: 15px;
+}
+
+.cart li:hover .dropdown{
+  display: block;
+  background-color: white;
+  position:absolute;
+  align-items: center;
+  border-radius: 10px;
+  margin-block: 5px;
+}
+
+.dropdown{
+  display: none;
+  list-style-type: none;
+}
+
+
+.dropdown li a{
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: rgba(152, 152, 171, 1);
+  align-items: center;
+}
+
+.sideLeft{
+  display: flex;
+  align-items: center;
+}
+
+.navigation{
+  list-style-type: none;
+  text-align: center;
+}
+
+.navigation>li{
+  display: inline-block;
+  padding:20px;
+}
+
+.navigation>li>a{
+  color: white;
+  font-size: 15px;
+  font-weight: 550;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 12px 12px;
+}
+
+.navigation>li>a:hover{
+  background-color: rgb(243, 161, 48);
+  color: black;
+  transition:all .4s ease-in-out;
+}
+
+.keranjang-belanja {
+  padding: 40px;
+  padding-left: 100px;
+  text-transform: capitalize;
+  color:rgb(81, 111, 235);
+}
+
+.keranjang-belanja h2{
+  padding-bottom: 10px;
+}
+
+.list-product{
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 10%; left: 10%;
+}
+
+.wrap-product{
+  margin-top: 20px;
+  margin-right:20px ;
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid rgba(179, 210, 248, 1);
+  border-radius: 6px;
+}
+
+.left-image{
+  display: flex;
+}
+
+.left-image img{
+  padding: 20px;
+  width: 500px;
+  height: 280px;
+}
+
+.mid-detail{
+  padding: 20px;    
+  padding-top: 35px;
+  font-size: larger;
+
+}
+
+.mid-detail h3{
+  color: black;
+}
+
+.mid-detail p{
+  color: rgba(100, 100, 100, 1);
+}
+
+.right-price{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 20px;
+  padding-top: 35px;
+  margin-right: 40px;
+  color: black;
+}
+
+.btn-action{
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-action button{
+  width: 180px;
+  height: 40px;
+}
+
+.btn-checkout{
+  margin-bottom: 20px;
+  background-color: rgb(81, 111, 235);
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-hapus{
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  background-color: red;
+  color: white;
+}

@@ -1,0 +1,311 @@
+*,html,body{
+  margin: 0;
+  padding:0;
+  font-family: "Roboto", sans-serif;
+}
+
+body{
+  background:rgba(248, 248, 248, 1);
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper{
+  display: flex;
+  justify-content:space-between;
+  width: 100%;
+  height: 70px;
+  background-color: rgb(81, 111, 235);
+  align-items: center;
+}
+
+.cart{
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  color: white;
+  align-items: center;
+}
+
+.cart img{
+  width: 40px;
+}
+
+.cart>li{
+  padding: 15px;
+}
+
+.cart li:hover .dropdown{
+  display: block;
+  background-color: white;
+  position:absolute;
+  align-items: center;
+  border-radius: 10px;
+  margin-block: 5px;
+}
+
+.dropdown{
+  display: none;
+  list-style-type: none;
+}
+
+
+.dropdown li a{
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: rgba(152, 152, 171, 1);
+  align-items: center;
+}
+
+.sideLeft{
+  display: flex;
+  align-items: center;
+}
+
+.navigation{
+  list-style-type: none;
+  text-align: center;
+}
+
+.navigation>li{
+  display: inline-block;
+  padding:20px;
+}
+
+.navigation>li>a{
+  color: white;
+  font-size: 15px;
+  font-weight: 550;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 12px 12px;
+}
+
+.navigation>li>a:hover{
+  background-color: rgb(243, 161, 48);
+  color: black;
+  transition:all .4s ease-in-out;
+}
+
+.content{
+  padding:50px;
+  display: flex;
+}
+
+.utama img{
+  border-radius: 10px;
+}
+
+.pop-up-main{
+  position: fixed;
+  top: 0; left: 0;
+  background:rgba(0,0,0,.9);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: none;
+}
+
+.pop-up-main span{
+  position: absolute;
+  top:0 ; right: 10px;
+  font-size: 40px;
+  font-weight: bolder;
+  color:white;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.pop-up-main img{
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  border: 5px solid #fff;
+  width: 1200px;
+  object-fit: cover;
+}
+
+@media(max-width:768ox){
+  .pop-up-main img{
+      width:95%;
+  }
+}
+
+.tambahan img{
+  border-radius: 10px;
+  padding: 3px;
+}
+
+.tema{
+  text-transform: capitalize;
+  padding:5px;
+}
+
+.desc>p{
+  color: rgba(100, 100, 100, 1);
+  text-transform: capitalize;
+  padding:5px;
+}
+
+.desc{
+  width: 50%;
+  padding-left: 30px;
+}
+
+.temaHarga{
+  display: flex;
+  justify-content: space-between;
+}
+
+.tema{
+  display: flex;
+  flex-direction: column;
+}
+
+.fitur{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.upper{
+  display: flex;
+  flex-direction: row;
+}
+
+.lower{
+  display: flex;
+  flex-direction: row;
+}
+
+.gambar{
+  background:rgba(248, 248, 248, 1);
+  width: 150px;
+  padding: 20px;
+}
+
+.ket{
+  text-transform: capitalize;
+}
+
+.harga>.wrapper{
+  background-color: rgba(179, 210, 248, 0.57);
+  padding-inline-start: 20px;
+  padding-inline-end: 20px;
+  color:rgba(81, 111, 235, 1);
+  border-radius: 10px;
+}
+
+.harga>.wrapper p{
+  color:rgba(81, 111, 235, 1);
+  font-weight: 800;
+  margin: auto;
+  text-transform: capitalize;
+}
+
+.addChart{
+  margin-top: 60px;
+  text-align: center;
+}
+
+.button {
+  background-color: rgb(81, 111, 235);
+  color: white;
+  padding: 15px 155px;
+  text-align: center;
+  font-weight: 600;
+  font-size: larger;
+  text-transform: capitalize;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.lainnya h2{
+  padding: 50px;
+  padding-left: 50px;
+  text-transform: capitalize;
+  color:rgb(81, 111, 235);
+}
+
+.template {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.template:hover {
+  border: 1px solid #777;
+  border-radius: 10px;
+}
+
+.template img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.jenis{
+  padding-left: 50px;
+  float: left;
+  margin-bottom: 40px;
+}
+
+.responsive {
+  display:inline-block;
+  padding: 10px;
+  width: 24.99999%;
+}
+
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+#footer>.bungkus{
+  display: flex;
+  background-color: rgb(81, 111, 235);
+  padding: 17px;
+  height: 130px;
+  align-items: center;
+}
+
+.bungkus>.left{
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  color: white;
+  padding: 40px;
+}
+
+.title{
+  color: rgb(243, 161, 48);
+  font-weight: 1000;
+  text-transform: capitalize;
+  font-size: 100%;
+}
+
+#footer>.mid{
+  display: flex;
+  text-align: center;
+}
+
+.about{
+  color: white;
+  text-transform: capitalize;
+  font-size: larger;
+}

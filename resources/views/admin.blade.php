@@ -68,31 +68,28 @@
     
             </div>
     
-            <div class="row mt-5 mb-5">
+            <div class="row row-cols-3 mt-5 mb-5">    
               <div class="col">
                 <div class="card">
-                  <img src="assets/wediing.jpg" class="card-img-top" alt="...">
-                  <div class="card-footer bg-info text-center">
-                    Rustic
-                  </div>
-                </div>
-              </div>
-    
-              <div class="col">
-                <div class="card">
-                  <img src="assets/wediing.jpg" class="card-img-top" alt="...">
-                  <div class="card-footer bg-info text-center">
-                    Minimalis
-                  </div>
-                </div>
-              </div>
-    
-    
-              <div class="col">
-                <div class="card">
-                  <img src="assets/wediing.jpg" class="card-img-top" alt="...">
+                  <img src="https://drive.google.com/uc?export=view&id=1-38_pvL77PKA5obEJU91I37tX6zxTFf-" class="card-img-top" alt="...">
                   <div class="card-img-overlay text-center m-5">
                     <a href="tambah.html" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"">Tambah Template</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="https://drive.google.com/uc?export=view&id=1-38_pvL77PKA5obEJU91I37tX6zxTFf-" class="card-img-top" alt="...">
+                  <div class="card-img-overlay text-center m-5">
+                    <a href="tambah.html" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"">Update Template</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="https://drive.google.com/uc?export=view&id=1-38_pvL77PKA5obEJU91I37tX6zxTFf-" class="card-img-top" alt="...">
+                  <div class="card-img-overlay text-center m-5">
+                    <a href="tambah.html" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"">Delete Template</a>
                   </div>
                 </div>
               </div>
@@ -119,13 +116,13 @@
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Jenis Template</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <input class="form-check-input" type="radio" name="Jenis" id="flexRadioDefault1" value="Long">
                         <label class="form-check-label" for="flexRadioDefault1">
                             Long
                         </label>
                         </div>
                         <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                        <input class="form-check-input" type="radio" name="Jenis" id="flexRadioDefault2"  value="Short" checked>
                         <label class="form-check-label" for="flexRadioDefault2">
                             Short
                         </label>
@@ -136,11 +133,11 @@
                   <div>
                     <select id="Tema" name="Tema">
                       <option value="unknown" disabled selected>-</option>
-                      <option value="CAK">CAK</option>
-                      <option value="CIK">CIK</option>
-                      <option value="CUK">CUK</option>
-                      <option value="CEK">CEK</option>
-                      <option value="COK">COK</option>
+                      <option value="Classic">Classic</option>
+                      <option value="Elegant">Elegant</option>
+                      <option value="Minimalis">Minimalis</option>
+                      <option value="Overlay Shadow">Overlay Shadow</option>
+                      <option value="Watercolor">Watercolor</option>
                     </select>
                   </div>
                 </div>

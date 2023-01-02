@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id('TemplateID', 12);
             $table->string('NamaTemplate', 24);
             $table->string('NamaTema', 24);
+            $table->string('Jenis');
             $table->integer('Harga');
             $table->integer('JumlahKlik');
             $table->integer('BanyakPembelian');
@@ -32,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('template');
+        Schema::dropIfExists('templates');
     }
 };

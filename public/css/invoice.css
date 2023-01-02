@@ -1,0 +1,292 @@
+*,html,body{
+  margin: 0;
+  padding:0;
+  font-family: "Roboto", sans-serif;
+}
+
+body{
+  background:rgba(248, 248, 248, 1);
+}
+
+.wrapper{
+  display: flex;
+  justify-content:space-between;
+  width: 100%;
+  height: 70px;
+  background-color: rgb(81, 111, 235);
+  align-items: center;
+}
+
+.cart{
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  color: white;
+  align-items: center;
+}
+
+.cart img{
+  width: 40px;
+}
+
+.cart>li{
+  padding: 15px;
+}
+
+.cart li:hover .dropdown{
+  display: block;
+  background-color: white;
+  position:absolute;
+  align-items: center;
+  border-radius: 10px;
+  margin-block: 5px;
+}
+
+.dropdown{
+  display: none;
+  list-style-type: none;
+}
+
+
+.dropdown li a{
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: rgba(152, 152, 171, 1);
+  align-items: center;
+}
+
+.sideLeft{
+  display: flex;
+  align-items: center;
+}
+
+.navigation{
+  list-style-type: none;
+  text-align: center;
+}
+
+.navigation>li{
+  display: inline-block;
+  padding:20px;
+}
+
+.navigation>li>a{
+  color: white;
+  font-size: 15px;
+  font-weight: 550;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 12px 12px;
+}
+
+.navigation>li>a:hover{
+  background-color: rgb(243, 161, 48);
+  color: black;
+  transition:all .4s ease-in-out;
+}
+
+.content{
+  display: flex;
+  padding: 80px;
+}
+
+.left-wrapper{
+  width: 50%;
+  height: 100%;
+}
+
+.left-content p{
+  color: rgb(100, 100, 104);
+}
+
+.left-content h1{
+  color: rgb(81, 111, 235);
+}
+
+.btn-back{    
+  width: 100px;
+  height: 30px;
+  margin-bottom: 15px;
+}
+
+.wrap-product{
+  margin-top: 20px;
+  margin-right:20px ;
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid rgba(179, 210, 248, 1);
+  border-radius: 6px;
+}
+
+.left-image{
+  display: flex;
+}
+
+.left-image img{
+  padding: 20px;
+  width: 280px;
+  height: 200px;
+}
+
+.mid-detail{
+  padding: 20px;    
+  padding-top: 35px;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.mid-detail h3{
+  color: black;
+}
+
+.mid-detail p{
+  color: rgba(100, 100, 100, 1);
+}
+
+.right-content{
+  margin-top: 60px;
+}
+
+.right-price{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 20px;
+  padding-top: 35px;
+  color: black;
+}
+
+.btn-action button{
+  width: 130px;
+  height: 40px;
+  margin-bottom: 15px;
+}
+
+.btn-hapus{
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+
+.detail-order{
+  padding-top: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  justify-content: space-between;
+}
+
+.total-harga{
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.total-harga .harga{
+  padding-right: 30px;
+  color:black;
+  font-size: 22px;
+}
+
+.right-wrapper{
+  padding-left: 10px;
+  width: 50%;
+  height: 100%;
+}
+
+.right-content h1{
+  color: rgb(81, 111, 235);
+}
+
+.norek{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 25px;
+  width: 600px;
+  margin-top: 40px;
+  border-radius: 6px;
+  font-weight: 800;
+  background-color: rgb(223, 235, 241);
+}
+
+.norek img{
+  padding: 10px;
+}
+
+.btn-pay{
+  display: flex;
+}
+
+.pay-button{
+  margin-bottom: 20px;
+  background-color: rgb(81, 111, 235);
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 24px;
+  width: 650px;
+  height: 50px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.popup{
+  border: 2px double #ccc;
+  width: 400px;
+  background:rgb(255, 255, 255);
+  border-radius: 6px;
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  text-align: center;
+  padding: 0 30px 50px;
+  color: rgb(81, 111, 235);
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.open-popup{
+  visibility: visible;
+  top:50%;
+  transform: translate(-50%, -50%) scale(1);
+  box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}
+
+.popup img{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.popup h3{
+  font-size: 30px;
+  font-weight: 500;
+  margin: 30px 0 10px;
+}
+
+.popup button{
+  width: 100%;
+  margin-top: 50px;
+  padding: 10px 0;
+  background:rgb(81, 111, 235) ;
+  color:#FFFFFF;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}

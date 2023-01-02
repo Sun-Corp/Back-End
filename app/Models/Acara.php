@@ -8,15 +8,12 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class Account extends Authenticatable
+class Acara extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
     protected $fillable = [
-        'Nama', 'Username', 'Email', 'Password', 'Role'
-    ];
-
-    protected $hidden = [
-        'Password'
+        'AccountID', 'NamaTemplate', 'NamaTema', 'KodeAcara', 'Tanggal', 'Lokasi',
+        'CalonL', 'CalonP', 'AyahL', 'AyahP', 'IbuL', 'IbuP'
     ];
 
 }

@@ -16,7 +16,7 @@ class UserDo extends Controller {
         $account->Name = $req->Name;
         $account->Username = $req->Username;
         $account->Email = $req->Email;
-        $account->Password = $req->Password;
+        $account->Password = sha1($req->Password);
         $account->save();
 
         return redirect('/login');
@@ -31,10 +31,10 @@ class UserDo extends Controller {
         if($var == null){
             return view("login");
         }
-        return view('welcome');
+        return view('homepage');
     }
     public function login(Request $req){
-        $account = Account::where("Email", $req->Email)->where("Password",$req->Password)->first();
+        $account = Account::where("Email", $req->Email)->where("Password",sha1($req->Password))->first();
 
         if(!empty($account)){
             if ($account->Email == "admin"){
@@ -44,7 +44,7 @@ class UserDo extends Controller {
             } else {
                 $account->Role = 'customer';
                 session(['account'=>$account]);
-                return redirect('/welcome');
+                return redirect('/homepage');
             }
         } else {
             return redirect("/")->with("alert","User tidak ditemukan !!!");
@@ -57,7 +57,7 @@ class UserDo extends Controller {
         if($var == null){
             return redirect("/")->with("alert","Harap Login Terlebih dahulu");
         } 
-        return view("welcome");
+        return view("homepage");
     }
 
     //LOGOUT SESSION
