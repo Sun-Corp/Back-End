@@ -46,6 +46,9 @@
               <li class="nav-item active">
                 <a href="/adminorder" class="nav-link text-center navigation-link">pesanan customer</a>
               </li>
+              <li class="nav-item">
+                <a href="/logout" class="nav-link text-light text-center navigation-link">Log Out</a>
+              </li>
             </ul>
           </div>
         </div>

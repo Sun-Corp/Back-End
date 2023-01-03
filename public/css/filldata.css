@@ -32,11 +32,11 @@ body{
 }
 
 .cart img{
-  width: 40px;
+  width: 30px;
 }
 
 .cart>li{
-  padding: 15px;
+  padding: 25px 15px;
 }
 
 .cart li:hover .dropdown{
@@ -117,9 +117,9 @@ body{
 }
 
 input[type=text]{
-  width: 100%;
-  padding: 12px 20px;
-  margin-top: 5px;
+  width: 550px;
+  height: 45px;
+  padding: 0px 25px;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -127,8 +127,9 @@ input[type=text]{
 }
 
 input[type=date]{
-  width: 100%;
-  padding: 12px 20px;
+  width: 550px;
+  height: 45px;
+  padding: 0px 25px;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -161,15 +162,15 @@ label{
   padding: 20px;
 }
 
-
 .home-button {
   padding-left: 15px;
   padding-right: 15px;
   margin-top: 24px;
+  margin-left: 20px;
   color: #FFFFFF;
   width:fit-content;
   height: 44px;
-  text-align: left;
+  text-align: right;
   font-weight: 600;
   font-size: 15px;
   border: none;

@@ -48,6 +48,9 @@
               <li class="nav-item">
                 <a href="/adminorder" class="nav-link text-light text-center navigation-link">pesanan Customer</a>
               </li>
+              <li class="nav-item">
+                <a href="/logout" class="nav-link text-light text-center navigation-link">Log Out</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -148,6 +151,22 @@
                 <div class="mb-3">
                   <label for="namaTemplate" class="form-label">Link Preview</label>
                   <input type="text" class="form-control" id="Link" name="Link">
+                </div>
+                <div class="mb-3">
+                  <label for="namaTemplate" class="form-label">Link Preview 2</label>
+                  <input type="text" class="form-control" id="Link" name="Link2">
+                </div>
+                <div class="mb-3">
+                  <label for="namaTemplate" class="form-label">Link Preview 3</label>
+                  <input type="text" class="form-control" id="Link" name="Link3">
+                </div>
+                <div class="mb-3">
+                  <label for="namaTemplate" class="form-label">Link Preview 4</label>
+                  <input type="text" class="form-control" id="Link" name="Link4">
+                </div>
+                <div class="mb-3">
+                  <label for="namaTemplate" class="form-label">Link Preview 5</label>
+                  <input type="text" class="form-control" id="Link" name="Link5">
                 </div>
             </div>
             <div class="modal-footer">

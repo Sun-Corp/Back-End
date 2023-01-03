@@ -23,37 +23,18 @@
       <nav class="wrapper">
         <div class="sideLeft">
           <ul class="navigation">
-            <li>
-              <a
-                href="/homepage"
-                >template undangan</a
-              >
-            </li>
-            <li><a href="/order">pesanan saya</a></li>
+            <li><a href="/homepage">Template Undangan</a></li>
+            <li><a href="/order">Pesanan Saya</a></li>
           </ul>
         </div>
         <ul class="cart">
-          <li>
-            <a href="/cart"
-              ><img
-                src="https://drive.google.com/uc?export=view&id=1ye7Fqyywv3mWtbhAgup4--FNIyZ8Qvps"
-            /></a>
-          </li>
-          <li><b>Hi, {{session('account')->Username}}</b></li>
-          <li>
-            <a href="#"
-              ><img
-                src="D:\Kuliah Informatika\Semester 5\RPL\viewBlade tubes\ellipse.png"
-            /></a>
-            <ul class="dropdown">
-              <li>
-                <a href="/logout"
-                  ><img
-                    src="D:\Kuliah Informatika\Semester 5\RPL\viewBlade tubes\Union (1).png"
-                /></a>
-              </li>
-            </ul>
-          </li>
+            <li><a href="/cart"><img src="https://drive.google.com/uc?export=view&id=1ye7Fqyywv3mWtbhAgup4--FNIyZ8Qvps"></a></li>
+            <li><b>Hi, {{session('account')->Username}}</b></li>
+            <li><a><img src="https://drive.google.com/uc?export=view&id=1DPnqicQgMiCxLMn7yPNj2E1TAprKSLxi"></a>
+              <ul class="dropdown">
+                <li><a href="/logout">Logout</a></li>
+              </ul>
+            </li>
         </ul>
       </nav>
 

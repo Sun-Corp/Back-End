@@ -38,7 +38,7 @@
               <li><b>Hi, {{session('account')->Username}}</b></li>
               <li><a><img src="https://drive.google.com/uc?export=view&id=1DPnqicQgMiCxLMn7yPNj2E1TAprKSLxi"></a>
                 <ul class="dropdown">
-                  <li><a href="/logout"><img src="https://drive.google.com/uc?export=view&id=11vVPZOzODwZBQzCEemAFRxhzF8IW0n7E"></a></li>
+                  <li><a href="/logout">Logout</a></li>
                 </ul>
               </li>
           </ul>

@@ -22,6 +22,9 @@ return new class extends Migration
             $table->integer('JumlahKlik');
             $table->integer('BanyakPembelian');
             $table->string('LinkPreview');
+            $table->string('LinkPreview2');
+            $table->string('LinkPreview3');
+            $table->string('LinkPreview4');
             $table->timestamps();
         });
     }

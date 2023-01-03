@@ -50,15 +50,31 @@ class AdminDo extends Controller {
     }
 
     public function addtemplate(Request $req){
-        $linkpart = explode('/file/d/', $req->Link);
-        $linkpart = explode('/view?', $linkpart[1]);
-        $linkpart = "https://drive.google.com/uc?export=view&id={$linkpart[0]}";
         $template = new Template;
         $template->NamaTemplate = $req->Nama;
         $template->NamaTema = $req->Tema;
         $template->Jenis = $req->Jenis;
         $template->Harga = $req->Harga;
+        $linkpart = explode('/file/d/', $req->Link);
+        $linkpart = explode('/view?', $linkpart[1]);
+        $linkpart = "https://drive.google.com/uc?export=view&id={$linkpart[0]}";
         $template->LinkPreview = $linkpart;
+        $linkpart = explode('/file/d/', $req->Link2);
+        $linkpart = explode('/view?', $linkpart[1]);
+        $linkpart = "https://drive.google.com/uc?export=view&id={$linkpart[0]}";
+        $template->LinkPreview2 = $linkpart;
+        $linkpart = explode('/file/d/', $req->Link3);
+        $linkpart = explode('/view?', $linkpart[1]);
+        $linkpart = "https://drive.google.com/uc?export=view&id={$linkpart[0]}";
+        $template->LinkPreview3 = $linkpart;
+        $linkpart = explode('/file/d/', $req->Link4);
+        $linkpart = explode('/view?', $linkpart[1]);
+        $linkpart = "https://drive.google.com/uc?export=view&id={$linkpart[0]}";
+        $template->LinkPreview4 = $linkpart;
+        $linkpart = explode('/file/d/', $req->Link5);
+        $linkpart = explode('/view?', $linkpart[1]);
+        $linkpart = "https://drive.google.com/uc?export=view&id={$linkpart[0]}";
+        $template->LinkPreview5 = $linkpart;
         $template->JumlahKlik = 0;
         $template->BanyakPembelian = 0;
         $template->save();

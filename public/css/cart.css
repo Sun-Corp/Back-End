@@ -32,11 +32,11 @@ body{
 }
 
 .cart img{
-  width: 40px;
+  width: 30px;
 }
 
 .cart>li{
-  padding: 15px;
+  padding: 25px 15px;
 }
 
 .cart li:hover .dropdown{
