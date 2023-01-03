@@ -110,13 +110,15 @@
               <p>13012012031012</p>
             </div>
             <div class="btn-pay">
+              <form action="/addorder/{{$AcaraID}}" method="POST">
+              @csrf
               <button
                 class="pay-button button"
                 type="submit"
-                onclick="openPopup()"
               >
                 Bayar Sekarang
               </button>
+              </form>
             </div>
           </div>
         </div>

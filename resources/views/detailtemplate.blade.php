@@ -17,7 +17,7 @@
         -->
     </head>
     <body>
-        <div class="container">
+        <div class="">
             <!-- SECTION : NAVBAR -->
       
             <nav class="wrapper">
@@ -28,8 +28,8 @@
                 </ul>
               </div>
               <ul class="cart">
-                  <li><a href="D:\Kuliah Informatika\Semester 5\RPL\viewBlade tubes\Keranjang Belanja\keranjangBelanja.html"><img src="D:\Kuliah Informatika\Semester 5\RPL\viewBlade tubes\shop cart.png"></a></li>
-                  <li><b>Hi, Guest</b></li>
+                  <li><a href="gBelanja.html"><img src="D:\Kuliah Informatika\Semester 5\RPL\viewBlade tubes\shop cart.png"></a></li>
+                  <li><b>Hi, {{session('account')->Username}}</b></li>
                   <li><a href="#"><img src="D:\Kuliah Informatika\Semester 5\RPL\viewBlade tubes\ellipse.png"></a>
                     <ul class="dropdown">
                       <li><a href="#logout"><img src="D:\Kuliah Informatika\Semester 5\RPL\viewBlade tubes\Union (1).png"></a></li>

@@ -43,10 +43,10 @@
           <div class="sidebar-body">
             <ul class="nav nav-list">
               <li class="nav-item active">
-                <a href="" class="nav-link text-center navigation-link">kelola</a>
+                <a href="/admin" class="nav-link text-center navigation-link">kelola</a>
               </li>
               <li class="nav-item">
-                <a href="pesanan.html" class="nav-link text-light text-center navigation-link">pesanan Customer</a>
+                <a href="/adminorder" class="nav-link text-light text-center navigation-link">pesanan Customer</a>
               </li>
             </ul>
           </div>

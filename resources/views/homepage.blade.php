@@ -17,7 +17,7 @@
         -->
     </head>
     <body>
-      <div class="container">
+      <div class="">
       
         <!-- SECTION : NAVBAR -->
   
@@ -29,16 +29,16 @@
               <div class="lastname">card</div>
             </div>
             <ul class="navigation">
-              <li><a href="#top">Template Undangan</a></li>
-              <li><a href="#chart">Pesanan Saya</a></li>
+              <li><a href="/homepage">Template Undangan</a></li>
+              <li><a href="/order">Pesanan Saya</a></li>
             </ul>
           </div>
           <ul class="cart">
-              <li><a href="D:\Kuliah Informatika\Semester 5\RPL\viewBlade tubes\Keranjang Belanja\empty-chart.html"><img src="https://drive.google.com/uc?export=view&id=1ye7Fqyywv3mWtbhAgup4--FNIyZ8Qvps"></a></li>
-              <li><b>Hi, Guest</b></li>
-              <li><a href="#"><img src="D:\Kuliah Informatika\Semester 5\RPL\viewBlade tubes\ellipse.png"></a>
+              <li><a href="/cart"><img src="https://drive.google.com/uc?export=view&id=1ye7Fqyywv3mWtbhAgup4--FNIyZ8Qvps"></a></li>
+              <li><b>Hi, {{session('account')->Username}}</b></li>
+              <li><a><img src="https://drive.google.com/uc?export=view&id=1DPnqicQgMiCxLMn7yPNj2E1TAprKSLxi"></a>
                 <ul class="dropdown">
-                  <li><a href="#logout"><img src="D:\Kuliah Informatika\Semester 5\RPL\viewBlade tubes\Union (1).png"></a></li>
+                  <li><a href="/logout"><img src="https://drive.google.com/uc?export=view&id=11vVPZOzODwZBQzCEemAFRxhzF8IW0n7E"></a></li>
                 </ul>
               </li>
           </ul>
@@ -59,11 +59,11 @@
         <!-- SECTION : PILIHAN TEMPLATE -->
   
         <div class="pilihan_template">
-          <a href="#" class="button">elegant</a>
+          <a href="#overlayShadow" class="button">elegant</a>
           <a href="#" class="button">minimalis</a>
           <a href="#" class="button">overlay shadow</a>
           <a href="#" class="button">watercolor</a>
-          <a href="#" class="button">classic</a>
+          <a href="classic" class="button">classic</a>
         </div>
   
         <!-- END SECTION : PILIHAN TEMPLATE -->

@@ -8,11 +8,6 @@ body{
   background:rgba(248, 248, 248, 1);
 }
 
-.container{
-  width: 100%;
-  height: 100%;
-}
-
 .wrapper{
   display: flex;
   justify-content:space-between;
@@ -92,18 +87,42 @@ body{
   transition:all .4s ease-in-out;
 }
 
-.keranjang-belanja {
-  padding: 40px;
-  padding-left: 100px;
-  text-transform: capitalize;
-  color:rgb(81, 111, 235);
+.top-content{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 30px;
 }
 
-.keranjang-belanja h2{
-  padding-bottom: 10px;
+.top-content .title{
+  padding: 30px;
+  color:rgba(81, 111, 235, 1) ;
+}
+
+.progres{
+  padding: 10px;
+}
+
+.progres a{
+
+  margin:auto;
+  color: rgb(81, 111, 235);
+  padding:50px;
+  text-align: center;
+  font-weight: 600;
+  font-size: larger;
+  text-transform: capitalize;
+  text-decoration: none;
+  border-radius: 10px;
+
+}
+
+.progres .btn-selesai{
+  font-weight: 800;
 }
 
 .list-product{
+  padding: 60px;
   padding-top: 30px;
   display: flex;
   flex-direction: column;
@@ -132,30 +151,46 @@ body{
 
 .mid-detail{
   padding: 20px;    
-  padding-top: 35px;
-  font-size: larger;
-
-}
-
-.mid-detail h3{
-  color: black;
-}
-
-.mid-detail p{
-  color: rgba(100, 100, 100, 1);
-}
-
-.right-price{
+  padding-top: 25px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+}
+
+.item-name .done {
+  width: fit-content;
+  padding: 15px 30px;
+  margin-bottom: 5px;
+  background-color: rgba(238, 243, 246, 1);
+  color: rgba(100, 100, 100, 1);
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.mid-detail h3{
+  color:rgb(81, 111, 235) ;
+  font-size: 24px;
+}
+
+.mid-detail p{
+  color:rgb(81, 111, 235) ;
+  font-size: 18px;
+}
+
+.total-price p{
+  padding-bottom: 30px;
+  color:rgb(81, 111, 235) ;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.right-price{
   padding: 20px;
   padding-top: 35px;
   margin-right: 40px;
-  color: black;
 }
 
-.btn-action{
+.btn-action {
   display: flex;
   flex-direction: column;
 }
@@ -163,31 +198,15 @@ body{
 .btn-action button{
   width: 180px;
   height: 40px;
+  margin: 20px;
 }
 
-.btn-checkout{
-  margin-bottom: 20px;
+.btn-verified{
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
   background-color: rgb(81, 111, 235);
   color: white;
-  font-size: 16px;
-  font-weight: 700;
-  border: none;
-  border-radius: 6px;
   cursor: pointer;
-}
-
-.btn-hapus{
-  font-size: 16px;
-  font-weight: 700;
-  border: none;
-  border-radius: 6px;
-  background-color: red;
-  color: white;
-}
-
-.content{
-  position: absolute;
-  top: 30%; left: 35%;
-  text-align: center;
-  color: rgba(152, 152, 171, 1);
 }

@@ -17,7 +17,7 @@
         -->
     </head>
     <body>
-    <div class="container">
+    <div class="">
       <!-- SECTION : NAVBAR -->
 
       <nav class="wrapper">
@@ -25,21 +25,21 @@
           <ul class="navigation">
             <li>
               <a
-                href="file:///D:/Kuliah%20Informatika/Semester%205/RPL/viewBlade%20tubes/home%20page/homepage.html"
+                href="/homepage"
                 >template undangan</a
               >
             </li>
-            <li><a href="D:\Kuliah Informatika\Semester 5\RPL\viewBlade tubes\Pesanan saya\pesanan-terverifikasi.html">pesanan saya</a></li>
+            <li><a href="/order">pesanan saya</a></li>
           </ul>
         </div>
         <ul class="cart">
           <li>
-            <a href="D:\Kuliah Informatika\Semester 5\RPL\viewBlade tubes\Keranjang Belanja\keranjangBelanja.html"
+            <a href="/cart"
               ><img
-                src="D:\Kuliah Informatika\Semester 5\RPL\viewBlade tubes\shop cart.png"
+                src="https://drive.google.com/uc?export=view&id=1ye7Fqyywv3mWtbhAgup4--FNIyZ8Qvps"
             /></a>
           </li>
-          <li><b>Hi, Guest</b></li>
+          <li><b>Hi, {{session('account')->Username}}</b></li>
           <li>
             <a href="#"
               ><img
@@ -47,7 +47,7 @@
             /></a>
             <ul class="dropdown">
               <li>
-                <a href="#logout"
+                <a href="/logout"
                   ><img
                     src="D:\Kuliah Informatika\Semester 5\RPL\viewBlade tubes\Union (1).png"
                 /></a>
@@ -60,12 +60,19 @@
       <!-- END SECTION : NAVBAR -->
 
       <!-- SECTION : LIST BELANJA -->
-
+      @if ($temps != [])
       <div class="keranjang-belanja">
         <h2>Keranjang Belanja</h2>
         <h3>Chekout Sekarang Juga!</h3>
         <div class="list-product">
+          @php
+            $i = -1  
+          @endphp
           @foreach($temps as $temp)
+          @php
+            $i = $i + 1;
+            $CartID = $carts[$i]->CartID;
+          @endphp
           <div class="wrap-product">
             <div class="left-image">
               <img
@@ -79,15 +86,23 @@
             <div class="right-price">
               <h2>Rp {{$temp->Harga}}<h2>
               <div class="btn-action">
-                <a href="/filldata/{{$temp->TemplateID}}"><button class="btn-checkout">Checkout</button></a>
-                <button class="btn-hapus">Hapus</button>
+                <a href="/filldata/{{$CartID}}/{{$temp->TemplateID}}"><button class="btn-checkout">Checkout</button></a>
+                <a href="/deletecart/{{$CartID}}"><button class="btn-hapus">Hapus</button></a>
               </div>
             </div>
           </div>
           @endforeach
         </div>
       </div>
-
+      @else
+      <div class="content">
+        <h2>
+          Yah keranjang belanjaanmu kosong<br />
+          Pesan sekarang!
+        </h2>
+        <img src="https://drive.google.com/uc?export=view&id=1oXYOiWZNY4ZMdHaRplf4AcxbTC3KoCWb" alt="" />
+      </div>
+      @endif
       <!-- END SECTION : LIST BELANJA -->
 
     </div>

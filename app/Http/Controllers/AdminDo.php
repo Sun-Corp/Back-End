@@ -5,11 +5,42 @@ use DB;
 use Illuminate\Http\Request;
 use App\Models\Account;
 use App\Models\Template;
+use App\Models\Order;
 
 class AdminDo extends Controller {
     public function home(){
         $temps = DB::select('select * from templates');
         return view("admin", ['temps'=>$temps]);
+    }
+    public function manage(){
+        $orders = DB::select('select * from orders');
+        $acara = DB::select('select * from acaras');
+        return view("adminorder", ['Orders'=>$orders], ['Acaras'=>$acara]);
+    }
+    public function updateorder($Path, $OrderID){
+        if ($Path == 'InvoiceStatus'){
+            if (DB::table('orders')->where('OrderID', $OrderID)->pluck('InvoiceStatus')[0] == 0){
+                DB::table('orders')->where('OrderID', $OrderID)->update(['InvoiceStatus'=>1]);
+            } else {
+                DB::table('orders')->where('OrderID', $OrderID)->update(['InvoiceStatus'=>0]);
+            }
+        }
+
+        if ($Path == 'VerifikasiStatus'){
+            if (DB::table('orders')->where('OrderID', $OrderID)->pluck('VerifikasiStatus')[0] == 0){
+                DB::table('orders')->where('OrderID', $OrderID)->update(['VerifikasiStatus'=>1]);
+            } else {
+                DB::table('orders')->where('OrderID', $OrderID)->update(['VerifikasiStatus'=>0]);
+            }
+        }
+        if ($Path == 'OrderStatus'){
+            if (Order::where('OrderID', $OrderID)->pluck('OrderStatus')[0] == 0){
+                DB::table('orders')->where('OrderID', $OrderID)->update(['OrderStatus'=>1]);
+            } else {
+                DB::table('orders')->where('OrderID', $OrderID)->update(['OrderStatus'=>0]);
+            }
+        }
+        return redirect('/adminorder');
     }
     
     //LOGOUT SESSION

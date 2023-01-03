@@ -26,13 +26,18 @@ Route::GET('/welcome', [UserDo::class, 'welcome']);
 
 //ADMIN METHOD
 Route::GET('/admin', [AdminDo::class, 'home']);
-Route::GET('/addtemplate', [AdminDo::class, 'addtemplate']); 
+Route::GET('/adminorder', [AdminDo::class, 'manage']);
+Route::GET('/addtemplate', [AdminDo::class, 'addtemplate']);
+Route::GET('/updateorder/{Path}/{OrderID}', [AdminDo::class, 'updateorder']);
 
 //USER METHOD
 Route::GET('/homepage', [HomeDo::class, 'home']);
 Route::GET('/details/{NamaTema}/{NamaTemplate}', [HomeDo::class, 'detail']);
 Route::GET('/cart', [HomeDo::class, 'cart']);
 Route::GET('/addcart/{NamaTema}/{NamaTemplate}', [HomeDo::class, 'addcart']);
-Route::GET('/filldata/{TemplateID}', [HomeDo::class, 'filldata']);
-Route::POST('/filldata/{TemplateID}', [HomeDo::class, 'uploadfilldata']);
+Route::GET('/deletecart/{CartID}', [HomeDo::class, 'deletecart']);
+Route::GET('/filldata/{CartID}/{TemplateID}', [HomeDo::class, 'filldata']);
+Route::POST('/filldata/{CartID}/{TemplateID}', [HomeDo::class, 'uploadfilldata']);
 Route::GET('/invoice/{AcaraID}', [HomeDo::class, 'invoice']);
+Route::GET('/order', [HomeDo::class, 'order']);
+Route::POST('/addorder/{AcaraID}', [HomeDo::class, 'addorder']);
