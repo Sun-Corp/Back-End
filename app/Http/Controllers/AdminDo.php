@@ -9,10 +9,16 @@ use App\Models\Order;
 
 class AdminDo extends Controller {
     public function home(){
+        if (session('account')->Role != 'admin'){
+            return redirect('/');
+        }
         $temps = DB::select('select * from templates');
         return view("admin", ['temps'=>$temps]);
     }
     public function manage(){
+        if (session('account')->Role != 'admin'){
+            return redirect('/');
+        }
         $orders = DB::select('select * from orders');
         $acara = DB::select('select * from acaras');
         return view("adminorder", ['Orders'=>$orders], ['Acaras'=>$acara]);

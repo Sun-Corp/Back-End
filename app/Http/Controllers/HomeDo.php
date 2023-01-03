@@ -24,7 +24,7 @@ class HomeDo extends Controller {
     }
     
     public function cart(){
-        $AccountID = Account::where('Email', (session('account')->Email))->pluck('AccountID');
+        $AccountID = Account::where('Email', (session('account')->Email))->pluck('AccountID')[0];
         $carts = Cart::where('AccountID', $AccountID)->get();
         $temps = [];
         foreach ($carts as $cart){
@@ -73,6 +73,11 @@ class HomeDo extends Controller {
         return redirect('/invoice/'.str($AcaraID));
     }
 
+    public function deletedata($AcaraID){
+        DB::table('Acaras')->where('AcaraID', $AcaraID)->delete();
+        return redirect('/cart');
+    }
+
     public function invoice($AcaraID){
         $acara = Acara::where('AcaraID', $AcaraID)->first();
         $template = Template::where('NamaTemplate', $acara->NamaTemplate)->where('NamaTema', $acara->NamaTema)->first();
@@ -95,7 +100,7 @@ class HomeDo extends Controller {
     }
 
     public function order(){
-        $accountid = Account::where('Email', session('account')->Email)->pluck('AccountID');
+        $accountid = Account::where('Email', session('account')->Email)->pluck('AccountID')[0];
         $acara = Acara::where('AccountID', $accountid)->get();
         $orders = [];
         foreach ($acara as $acr){

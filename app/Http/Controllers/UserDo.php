@@ -19,7 +19,7 @@ class UserDo extends Controller {
         $account->Password = sha1($req->Password);
         $account->save();
 
-        return redirect('/login');
+        return redirect('/');
     }
 
     //LOGIN SESSION
@@ -31,13 +31,15 @@ class UserDo extends Controller {
         if($var == null){
             return view("login");
         }
-        return view('homepage');
+        return redirect('/homepage');
     }
     public function login(Request $req){
         $account = Account::where("Email", $req->Email)->where("Password",sha1($req->Password))->first();
-
+        if ($account == null){
+            $account = Account::where("Username", $req->Email)->where("Password",sha1($req->Password))->first();
+        }
         if(!empty($account)){
-            if ($account->Email == "admin"){
+            if ($account->Email == "admin@gmail.com" || $account->Username == "admin"){
                 $account->Role = 'admin';
                 session(['account'=>$account]);
                 return redirect('/admin');

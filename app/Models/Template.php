@@ -12,7 +12,8 @@ class Template extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
     protected $fillable = [
-        'NamaTemplate', 'Jenis', 'NamaTema', 'Harga', 'LinkPreview', 'JumlahKlik', 'BanyakPembelian'
+        'NamaTemplate', 'Jenis', 'NamaTema', 'Harga', 'LinkPreview', 'JumlahKlik', 'BanyakPembelian',
+        'LinkPreview2', 'LinkPreview3', 'LinkPreview4', 'LinkPreview5'
     ];
 
 }

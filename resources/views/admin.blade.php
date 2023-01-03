@@ -35,7 +35,7 @@
                 <img class="admin-logo" src="assets/admin.svg" alt="">
               </div>
               <div class="admin-name">
-                <p class="admin">{{session('account')->Username}}</p>
+                <p class="admin">Hi, {{session('account')->Name}}</p>
               </div>
             </div>
           </div>
@@ -43,13 +43,13 @@
           <div class="sidebar-body">
             <ul class="nav nav-list">
               <li class="nav-item active">
-                <a href="/admin" class="nav-link text-center navigation-link">kelola</a>
+                <a href="/admin" class="nav-link text-center navigation-link">Manage Template</a>
               </li>
               <li class="nav-item">
-                <a href="/adminorder" class="nav-link text-light text-center navigation-link">pesanan Customer</a>
+                <a href="/adminorder" class="nav-link text-light text-center navigation-link">Customer Order</a>
               </li>
               <li class="nav-item">
-                <a href="/logout" class="nav-link text-light text-center navigation-link">Log Out</a>
+                <a href="/logout" class="nav-link text-light text-center navigation-link">Logout</a>
               </li>
             </ul>
           </div>

@@ -18,13 +18,14 @@ return new class extends Migration
             $table->string('NamaTemplate', 24);
             $table->string('NamaTema', 24);
             $table->string('Jenis');
-            $table->integer('Harga');
+            $table->string('Harga');
             $table->integer('JumlahKlik');
             $table->integer('BanyakPembelian');
             $table->string('LinkPreview');
             $table->string('LinkPreview2');
             $table->string('LinkPreview3');
             $table->string('LinkPreview4');
+            $table->string('LinkPreview5');
             $table->timestamps();
         });
     }

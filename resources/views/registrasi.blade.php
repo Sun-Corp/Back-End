@@ -46,22 +46,22 @@
                     @csrf
                     <label for "" class="form-label">Email</label>
                     <div class="card-input-container username">
-                        <input class="form-control" type="text" name="Email" placeholder="Enter your username" id="Email">
+                        <input class="form-control" type="text" name="Email" placeholder="Enter your email" id="Email">
                     </div>
                     <label for "" class="form-label">Username</label>
                     <div class="card-input-container username">
                         <input class="form-control" type="text" name="Username" placeholder="Enter your username" id="Username">
                     </div>
-                    <label for "" class="form-label">Name</label>
+                    <label for "" class="form-label">First Name</label>
                     <div class="card-input-container username">
-                        <input class="form-control" type="text" name="Name" placeholder="Enter your username" id="Name">
+                        <input class="form-control" type="text" name="Name" placeholder="Enter your first name" id="Name">
                     </div>
                     <label for "" class="form-label">Password</label>
                     <div class="card-input-container password">
                         <input class="form-control" type="password" name="Password" placeholder="Enter your password" id="Password">
                     </div>
                     <button class="card-button" type="submit">Regist</button>
-                    <small class="card-forgot-password">Forgot your password ? <a>Reset Password</a></small>
+                    <small class="card-forgot-password">Already have an account ? <a href="/login">Login Here</a></small>
                 </form>
             </div>
         </div>

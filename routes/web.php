@@ -38,6 +38,7 @@ Route::GET('/addcart/{NamaTema}/{NamaTemplate}', [HomeDo::class, 'addcart']);
 Route::GET('/deletecart/{CartID}', [HomeDo::class, 'deletecart']);
 Route::GET('/filldata/{CartID}/{TemplateID}', [HomeDo::class, 'filldata']);
 Route::POST('/filldata/{CartID}/{TemplateID}', [HomeDo::class, 'uploadfilldata']);
+Route::POST('/deletedata/{AcaraID}', [HomeDo::class, 'deletedata']);
 Route::GET('/invoice/{AcaraID}', [HomeDo::class, 'invoice']);
 Route::GET('/order', [HomeDo::class, 'order']);
 Route::POST('/addorder/{AcaraID}', [HomeDo::class, 'addorder']);

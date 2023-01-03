@@ -210,3 +210,10 @@ body{
   color: white;
   cursor: pointer;
 }
+
+.content{
+  position: absolute;
+  top: 30%; left: 41%;
+  text-align: center;
+  color: rgba(152, 152, 171, 1);
+}

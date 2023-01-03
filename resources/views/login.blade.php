@@ -42,16 +42,16 @@
                 <h4 class="card-subtitle">RIGHT NOW!</h4>
                 <form class="card-form" action="/login" method="get">
                     @csrf
-                    <label for "" class="form-label">Email</label>
+                    <label for "" class="form-label">Email / Username</label>
                     <div class="card-input-container username">
-                        <input class="form-control" type="text" name="Email" placeholder="Enter your username" id="Email">
+                        <input class="form-control" type="text" name="Email" placeholder="Enter your username or email" id="Email">
                     </div>
                     <label for "" class="form-label">Password</label>
                     <div class="card-input-container password">
                         <input class="form-control" type="password" name="Password" placeholder="Enter your password" id="Password">
                     </div>
                     <button class="card-button" type="submit">Sign In</button>
-                    <small class="card-forgot-password">Forgot your password ? <a>Reset Password</a></small>
+                    <small class="card-forgot-password">Don't Have an account ? <a href="/registrasi">Register Here</a></small>
                 </form>
             </div>
         </div>

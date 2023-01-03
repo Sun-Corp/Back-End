@@ -60,28 +60,28 @@
       
                 <div class="tambahan">
                   <img
-                    src="{{$template->LinkPreview}}"
+                    src="{{$template->LinkPreview2}}"
                     class="smallImg"
                     width="220"
                     height="180"
                     alt="Long Wedding 1"
                   />
                   <img
-                    src="{{$template->LinkPreview}}"
+                    src="{{$template->LinkPreview3}}"
                     class="smallImg"
                     width="220"
                     height="180"
                     alt="Long Wedding 1"
                   />
                   <img
-                    src="{{$template->LinkPreview}}"
+                    src="{{$template->LinkPreview4}}"
                     class="smallImg"
                     width="220"
                     height="180"
                     alt="Long Wedding 1"
                   />
                   <img
-                    src="{{$template->LinkPreview}}"
+                    src="{{$template->LinkPreview5}}"
                     class="smallImg"
                     width="220"
                     height="180"
